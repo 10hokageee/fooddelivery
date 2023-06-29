@@ -1,1 +1,42 @@
-$title: #3F4255;
+$dark-blue: #3F4255;
+$btn-yellow: #FFE145;
+$text-dark: #313030;
+$gray-light: #D4D7E5;
+$text-gray: #9093A6;
+$section-bg: #F2F4FA;
+$dark-yellow: #B79C10;
+
+$burgerWidth: 24px; 
+$burgerHeight: 24px; 
+$burgerLineHeight: 2px; 
+$burgerColor: $text-gray; 
+
+
+%martel-300 {
+  font-family: 'Martel', sans-serif;
+  font-weight: 300;
+}
+
+%martel-800 {
+  font-family: 'Martel', sans-serif;
+  font-weight: 800;
+}
+
+%martel-700 {
+  font-family: 'Martel', sans-serif;
+  font-weight: 700;
+}
+
+%poppins-300 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+%poppins-600 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+%transition {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out, border 0.3s ease-in-out;
+}
