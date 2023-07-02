@@ -7,6 +7,13 @@
 
 .header {
   border-bottom: 1px solid $gray-light;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: #fff;
+
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -14,8 +21,66 @@
     align-items: center;
   }
 
-  &__list {
-    display: none;
+  &__burger-nav {
+    @extend %transition;
+    position: fixed;
+    right: 0;
+    top: 73px;
+    bottom: 0;
+    background-color: #fff;
+    padding: 36px;
+    height: 100vh;
+    width: 285px;
+    transform: translateX(1000%);
+  
+
+    &.header__burger-nav--active {
+      transform: translateX(0);
+    }
+  }
+
+  &__burger-contact {
+    margin-bottom: 46px;
+  }
+
+  &__burger-phone {
+    padding-left: 37px;
+    margin-bottom: 6px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      background-image: url("../images/icons/call.svg");
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__burge-time {
+    font-size: 12px;
+    @extend %martel-300;
+    line-height: 16px;
+    color: $text-gray;
+    padding-left: 37px;
+  }
+
+  &__list-item {
+    color: $text-gray;
+
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__list-link {
+    @extend %transition;
+    &:hover {
+      color: $dark-blue;
+    }
   }
 
   &__item-nav {
@@ -46,11 +111,12 @@
 
 .preview {
   padding-top: 25px;
+
   &__inner {
     background-position: right;
     background-repeat: no-repeat;
     background-size: 803px 706px;
-    padding: 95px 0 360px 0;
+    padding: 141px 0 360px 0;
     position: relative;
   }
 
@@ -164,31 +230,31 @@
     padding: 14px 24px;
     background-color: #f2f4fa;
   }
+}
 
-  .slick-next,
-  .slick-prev {
-    padding: 12px;
-    background-color: #fff;
-    border-radius: 25px;
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $text-gray;
-    }
+.slick-next,
+.slick-prev {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 25px;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $text-gray;
   }
+}
 
-  .slick-next {
-    left: 0;
-  }
+.slick-next {
+  left: 0;
+}
 
-  .slick-prev {
-    right: 0;
-  }
+.slick-prev {
+  right: 0;
 }
 
 .address {
@@ -253,5 +319,232 @@
     padding: 28px 24px;
     line-height: 1.3;
     color: $dark-yellow;
+  }
+}
+
+.specialities {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__list-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & svg {
+      width: 48px;
+      height: 48px;
+      fill: $btn-yellow;
+      stroke: $dark-yellow;
+      align-self: center;
+    }
+  }
+
+  &__subtitle {
+    @extend %martel-300;
+    line-height: 1.5;
+    padding: 16px 8px 24px 8px;
+  }
+
+  &__btn {
+    color: $text-gray;
+    line-height: 1.3;
+    padding: 14px 24px;
+    background-color: #f2f4fa;
+  }
+}
+
+.info {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__list-items {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 160px;
+    padding-bottom: 60px;
+  }
+
+  &__list-item {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("../images/icons/ellipse.svg");
+      position: absolute;
+      width: 127px;
+      height: 149px;
+      bottom: 55px;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+    }
+
+    & span {
+      font-size: 24px;
+      @extend %poppins-600;
+      line-height: 32px;
+      display: block;
+      letter-spacing: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 58px;
+    line-height: 64px;
+    letter-spacing: 2.9px;
+    margin-bottom: 47px;
+  }
+}
+
+.kitchens {
+  &__title {
+    margin-bottom: 21px;
+    color: $text-dark;
+    font-size: 36px;
+    @extend %poppins-300;
+    line-height: 64px;
+    letter-spacing: 2.88px;
+
+    & a {
+      color: $text-gray;
+      display: inline;
+    }
+  }
+
+  &__list-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer {
+  background-color: $dark-blue;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 49px 0;
+  }
+
+  &__applications {
+    max-width: 296px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 296px;
+      background-color: $gray-light;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__applications-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 9px;
+    }
+  }
+
+  &__contacts-list {
+    display: grid;
+    grid-template-columns: 157px 149px 297px;
+    color: $gray-light;
+    gap: 85px;
+  }
+
+  &__contacts-subtitle {
+    @extend %poppins-600;
+    line-height: 32px;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__contacts-link {
+    line-height: 20px;
+    @extend %martel-300;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 107px;
+    align-items: center;
+  }
+
+  &__bottom-socials {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom-social {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    @extend %transition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $btn-yellow;
+      svg {
+        fill: $dark-blue;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      fill: $gray-light;
+      @extend %transition;
+    }
+  }
+
+  &__copyright-items {
+    color: #fff;
+    display: flex;
+    @extend %martel-800;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__copyright-item:not(:last-child) {
+    margin-right: 54px;
+  }
+
+  &__copyright-text {
+    @extend %martel-300;
+    line-height: 16px;
   }
 }

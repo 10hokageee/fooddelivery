@@ -7,31 +7,44 @@
     <title>FoodDelivery</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body id="home">
     <header class="header">
       <div class="container">
         <div class="header__inner">
           <nav class="header__menu">
-            <a class="logo" href="#">
+            <a class="logo" href="#home">
               <img class="logo__img" src="images/icons/logo.svg" alt="Logo" />
             </a>
-            <ul class="header__list">
-              <li class="header__list-item">
-                <a class="header__list-link" href="#">Delivery info</a>
-              </li>
 
-              <li class="header__list-item">
-                <a class="header__list-link" href="#">About us</a>
-              </li>
+          <div class="header__burger-nav">
+             <div class="header__burger-contact">
+              <a class="header__burger-phone" href="tel:0800 111 126">
+                0800 111 126
+              </a>
+              <time class="header__burge-time">
+                8:00 - 22:00
+              </time>
+             </div>
 
-              <li class="header__list-item">
-                <a class="header__list-link" href="#">Restaurants</a>
-              </li>
+              <ul class="header__list">
+                <li class="header__list-item">
+                  <a class="header__list-link" href="#info">Delivery info</a>
+                </li>
 
-              <li class="header__list-item">
-                <a class="header__list-link" href="#">Specialities</a>
-              </li>
-            </ul>
+                <li class="header__list-item">
+                  <a class="header__list-link" href="#about-us">About us</a>
+                </li>
+
+                <li class="header__list-item">
+                  <a class="header__list-link" href="#restaurants">Restaurants</a>
+                </li>
+
+                <li class="header__list-item">
+                  <a class="header__list-link" href="#specialities">Specialities</a>
+                </li>
+              </ul>
+            </div>
+
             <ul class="header__user-nav">
               <li class="header__item-nav">
                 <button class="header__btn animation" type="button">
@@ -68,10 +81,15 @@
       <section class="preview">
         <h1 class="sr-only">Аood at home</h1>
         <div class="container">
-          <div class="preview__inner" style="background-image: url(images/preview-bg.jpg);">
-            <h2 class="preview__title title">Your Food court <span>at home</span>
+          <div
+            class="preview__inner"
+            style="background-image: url(images/preview-bg.jpg)"
+          >
+            <h2 class="preview__title title">
+              Your Food court <span>at home</span>
             </h2>
-            <button class="preview__btn">Delivery 
+            <button class="preview__btn">
+              Delivery
               <span>Order in</span>
             </button>
             <button class="preview__btn">
@@ -79,116 +97,444 @@
               <span>Grab and go</span>
             </button>
             <ul class="preview__list-items">
-              <li class="preview__list-item preview__list-item--time">delivery in all paris in less than 30 minutes</li>
-              <li class="preview__list-item preview__list-item--delivery">Free delivery from 29 euros</li>
-              <li class="preview__list-item preview__list-item--paris">Only fresh and French products</li>
+              <li class="preview__list-item preview__list-item--time">
+                delivery in all paris in less than 30 minutes
+              </li>
+              <li class="preview__list-item preview__list-item--delivery">
+                Free delivery from 29 euros
+              </li>
+              <li class="preview__list-item preview__list-item--paris">
+                Only fresh and French products
+              </li>
             </ul>
           </div>
         </div>
       </section>
 
-     <section class="restaurants section-padding">
-      <div class="container">
-        <div class="restaurants__wrapper">
-          <h2 class="restaurants__title title">Restaurants</h2>
-          <button class="restaurants__btn" type="button">show all</button>
-       </div>
-            <ul class="restaurants__list-items">
-
-              <li class="restaurants__list-item restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184" src="images/restaurants/restaurant1.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt burger</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#burger"></use>
-                </svg>                 
-              </li>
-
-              <li class="restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184" src="images/restaurants/restaurant2.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt il-paster</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#il-paster"></use>
-                </svg>                 
-              </li>
-
-              <li class="restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184" src="images/restaurants/restaurant3.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt believe</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#believe"></use>
-                </svg>                 
-              </li>
-
-              <li class="restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184"
-                 src="images/restaurants/restaurant4.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt vietnamese</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#vietnamese"></use>
-                </svg>                 
-              </li>
-              <li class="restaurants__list-item restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184" src="images/restaurants/restaurant1.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt burger</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#burger"></use>
-                </svg>                 
-              </li>
-
-              <li class="restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184" src="images/restaurants/restaurant2.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt il-paster</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#il-paster"></use>
-                </svg>                 
-              </li>
-
-              <li class="restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184" src="images/restaurants/restaurant3.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt believe</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#believe"></use>
-                </svg>                 
-              </li>
-
-              <li class="restaurants__list-item">
-                <img class="restaurants__img" width="296" height="184"
-                 src="images/restaurants/restaurant4.jpg" alt="restaurant food image"> 
-                <span class="sr-only">restaraunt vietnamese</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#vietnamese"></use>
-                </svg>                 
-              </li>
-
-            </ul>
-        </div>
-     </section>
-
-
-     <section class="address">
-      <div class="container">
-        <div class="address__inner">
-          <div class="address__content">
-            <h2 class="address__title title">
-              Your nearest restaurants
-            </h2>
-            <p class="address__text">
-              Each kitchen works with its own delivery area to deliver food to you as soon as possible
-            </p>
+      <section class="restaurants section-padding" id="restaurants">
+        <div class="container">
+          <div class="restaurants__wrapper">
+            <h2 class="restaurants__title title">Restaurants</h2>
+            <button class="restaurants__btn" type="button">show all</button>
           </div>
-          <form class="address__form" action="#">
-            <label class="address__label" for="addres">
-              <input class="address__area" type="text" name="address" required placeholder="Enter delivery address">
-            </label>
-            <button class="address__btn" type="submit">
-              send
-            </button>        
-          </form>
+          <ul class="restaurants__list-items">
+            <li class="restaurants__list-item restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant1.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt burger</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#burger"></use>
+              </svg>
+            </li>
+
+            <li class="restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant2.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt il-paster</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#il-paster"></use>
+              </svg>
+            </li>
+
+            <li class="restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant3.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt believe</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#believe"></use>
+              </svg>
+            </li>
+
+            <li class="restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant4.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt vietnamese</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#vietnamese"></use>
+              </svg>
+            </li>
+            <li class="restaurants__list-item restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant1.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt burger</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#burger"></use>
+              </svg>
+            </li>
+
+            <li class="restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant2.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt il-paster</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#il-paster"></use>
+              </svg>
+            </li>
+
+            <li class="restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant3.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt believe</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#believe"></use>
+              </svg>
+            </li>
+
+            <li class="restaurants__list-item">
+              <img
+                class="restaurants__img"
+                width="296"
+                height="184"
+                src="images/restaurants/restaurant4.jpg"
+                alt="restaurant food image"
+              />
+              <span class="sr-only">restaraunt vietnamese</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#vietnamese"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="address">
+        <div class="container">
+          <div class="address__inner">
+            <div class="address__content">
+              <h2 class="address__title title">Your nearest restaurants</h2>
+              <p class="address__text">
+                Each kitchen works with its own delivery area to deliver food to
+                you as soon as possible
+              </p>
+            </div>
+            <form class="address__form" action="#">
+              <label class="address__label" for="addres">
+                <input
+                  class="address__area"
+                  type="text"
+                  name="address"
+                  required
+                  placeholder="Enter delivery address"
+                />
+              </label>
+              <button class="address__btn" type="submit">send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="specialities section-padding" id="specialities">
+        <div class="container">
+          <div class="specialities__wrapper">
+            <h2 class="specialities__title title">Specialities</h2>
+            <button class="specialities__btn" type="button">show all</button>
+          </div>
+          <ul class="specialities__list-items">
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#bagel"></use>
+              </svg>
+              <p class="specialities__subtitle">Bagel</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#burger-specialities"></use>
+              </svg>
+              <p class="specialities__subtitle">Burger</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#chicken"></use>
+              </svg>
+              <p class="specialities__subtitle">Chicken</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#fish"></use>
+              </svg>
+              <p class="specialities__subtitle">Fish</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#fishnchips"></use>
+              </svg>
+              <p class="specialities__subtitle">Fish’Chips</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#vegan"></use>
+              </svg>
+              <p class="specialities__subtitle">Salads</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#pizza"></use>
+              </svg>
+              <p class="specialities__subtitle">Pizza</p>
+            </li>
+
+            <li class="specialities__list-item">
+              <svg>
+                <use xlink:href="images/sprite.svg#raviolli"></use>
+              </svg>
+              <p class="specialities__subtitle">Pasta</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="info" id="info" style="background-image: url(images/info-bg.jpg)">
+        <div class="container">
+          <ul class="info__list-items">
+            <li class="info__list-item">
+              <h5 class="info__subtitle">1</h5>
+              <span>kitchen</span>
+            </li>
+            <li class="info__list-item">
+              <h5 class="info__subtitle">11</h5>
+              <span>specialties</span>
+            </li>
+            <li class="info__list-item">
+              <h5 class="info__subtitle">11</h5>
+              <span>restaurants</span>
+            </li>
+            <li class="info__list-item">
+              <h5 class="info__subtitle">1</h5>
+              <span>transport costs</span>
+            </li>
+          </ul>
         </div>
       </div>
-     </section>
 
+      <section class="kitchens section-padding">
+        <div class="container">
+          <h2 class="kitchens__title">
+            #YellowKitchens <a class="link-animation" href="#">in instagram</a>
+          </h2>
+          <ul class="kitchens__list-items">
+            <li class="kitchens__list-item">
+              <img
+                src="images/kitchens/kitchens1.jpg"
+                width="296"
+                height="299"
+                alt="kitchens image"
+              />
+            </li>
+
+            <li class="kitchens__list-item">
+              <img
+                src="images/kitchens/kitchens2.jpg"
+                width="296"
+                height="299"
+                alt="kitchens image"
+              />
+            </li>
+
+            <li class="kitchens__list-item">
+              <img
+                src="images/kitchens/kitchens3.jpg"
+                width="296"
+                height="299"
+                alt="kitchens image"
+              />
+            </li>
+
+            <li class="kitchens__list-item">
+              <img
+                src="images/kitchens/kitchens4.jpg"
+                width="296"
+                height="299"
+                alt="kitchens image"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+
+      <footer class="footer" id="about-us">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__applications">
+              <a class="footer__logo logo" href="#home">
+                <img
+                  class="logo__img"
+                  src="images/icons/footer-logo.svg"
+                  alt="Logo"
+                />
+              </a>
+              <div class="footer__applications-items">
+                <a class="footer__applications-item" href="#">
+                  <img
+                    src="images/applications/appstore.png"
+                    width="79"
+                    height="28"
+                    alt="Appstore link"
+                  />
+                </a>
+                <a class="footer__applications-item" href="#">
+                  <img
+                    src="images/applications/google-play.png"
+                    width="86"
+                    height="28"
+                    alt="Appstore link"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__contacts">
+              <ul class="footer__contacts-list">
+                <li class="footer__contacts-item">
+                  <h3 class="footer__contacts-subtitle">About us</h3>
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Concept</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Franchise</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Business</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Restaurant signup</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >For Investors</a
+                  >
+                </li>
+
+                <li class="footer__contacts-item">
+                  <h3 class="footer__contacts-subtitle">Get help</h3>
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Read FAQs</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Restaurants</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Specialities</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Sign up to deliver</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >English</a
+                  >
+                </li>
+
+                <li class="footer__contacts-item">
+                  <h3 class="footer__contacts-subtitle">Contact us</h3>
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >Yellow kitchen Paris 11</a
+                  >
+                  <a class="footer__contacts-link link-animation" href="#"
+                    >69 avenue de la Republique 75011 Paris</a
+                  >
+                  <a
+                    class="footer__contacts-link link-animation"
+                    href="tel:0800 111 126"
+                    >0800 111 126</a
+                  >
+                  <a
+                    class="footer__contacts-link link-animation"
+                    href="mailto:contact@yellowkitchens.com"
+                    >contact@yellowkitchens.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <ul class="footer__bottom-socials">
+              <li class="footer__bottom-social">
+                <a class="footer__bottom-sociallink" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__bottom-social">
+                <a class="footer__bottom-sociallink" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__bottom-social">
+                <a class="footer__bottom-sociallink" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="footer__copyright-items">
+              <li class="footer__copyright-item">
+                <a class="footer__copyright-link link-animation" href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+
+              <li class="footer__copyright-item">
+                <a class="footer__copyright-link link-animation" href="#"
+                  >Terms</a
+                >
+              </li>
+
+              <li class="footer__copyright-item">
+                <p class="footer__copyright-text">© 2020 Yellow kitchen</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
 
     <script src="js/main.min.js"></script>
   </body>

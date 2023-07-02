@@ -38,5 +38,5 @@ $burgerColor: $text-gray;
 }
 
 %transition {
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out, border 0.3s ease-in-out;
-}
+  transition: color 0.3s ease-in-out, transform 0.1s ease-in-out, fill 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, translate 0.1s ease-in-out;
+} 
