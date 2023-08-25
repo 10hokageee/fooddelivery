@@ -2,11 +2,36 @@ $(function () {
   $(".restaurants__list-items").slick({
     infinite: false,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
+    variableWidth: true,
     prevArrow:
       '<button type="button" class="slick-next"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow:
       '<button type="button" class="slick-prev"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
   });
 
   $(".header__list-link, .logo").on("click", function (event) {
